@@ -13,11 +13,10 @@ public class Day2{
 	}
 	public static int reconstruct(ArrayList<Integer> a){
 		int original = 0;
-		for (int i = 0; i<a.size(); i++){
-			if (i==0)
-				original+=a.get(i);
-			else
-				original+=(a.get(i)*10*i);
+		int counter = 0;
+		for (int i = a.size()-1; i>=0; i--){
+			original+=(a.get(i)*Math.pow(10, counter));
+			counter++;
 		}
 		return original;
 	}
