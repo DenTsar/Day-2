@@ -11,4 +11,17 @@ public class Day2{
 		b.add(0,a);
 		return b;
 	}
+	public static int reconstruct(ArrayList<Integer> a){
+		int original = 0;
+
+		for (int i = 0; i<a.size(); i++){
+			if (i==0)
+				original+=a.get(i);
+			else
+				original+=(a.get(i)*10*i);
+		}
+
+		return original;
+
+	}
 }
